@@ -21,7 +21,7 @@ namespace ClientConsoleService
             var joinRoomDto = new JoinRoomDto
             {
                 UserId = Guid.Parse(Console.ReadLine()),
-                GameRoomId = Guid.Parse("7d633837-1acc-42e7-a4bd-4c605803137a")
+                GameRoomId = Guid.Parse(Console.ReadLine())
             };
 
             await _hubConnection.SendAsync("JoinRoom", joinRoomDto);
